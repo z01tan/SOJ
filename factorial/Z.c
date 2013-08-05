@@ -7,7 +7,7 @@ int Z(int N)
   for(i =0;i<=N;i+=5)
     {
       int local = i;
-      while((local%5)==0 || local!=0)
+      while((local%5)==0 && local!=0)
 	{
 	  ++acc;
 	  local/=5;
@@ -21,10 +21,9 @@ int Z(int N)
 int main()
 {
   int count,N,i;
-  printf("N:");
-  scanf("%d",count);
+  scanf("%d",&count);
   for(i=0;i<count;++i){
-    scanf("%d",N);
+    scanf("%d",&N);
     printf("%d\n",Z(N));
   }
 
