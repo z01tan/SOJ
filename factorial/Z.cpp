@@ -48,16 +48,26 @@ unsigned long long factorial(unsigned long long N)
 unsigned long long Z(unsigned long long N)
 {
   unsigned long long count = numberDigits<unsigned long long>(N);
+  std::cout<<count<<std::endl;
   unsigned long long acc = 0;
   unsigned long long decs;
-  for(unsigned long long i =1;i<=count;++i)
+  for(int i =1;i<=count;++i)
     {
+      std::cout<<" i = "<<i<<std::endl;
       decs = pow(10,i);
       if(i==1)
 	{
-	  acc+=(N/decs);
+	  acc+=N/decs;
 	  if(N%10>=5)
 	    ++acc;
+	}
+      if(i==2)
+	{
+	  acc+=N/25;
+	}
+      if(i==3)
+	{
+	  acc+=N/125;
 	}
       acc += (N/decs);
     }
@@ -70,9 +80,9 @@ int main()
   unsigned long long N;
   std::cout<<"N :";
   std::cin>>N;
-  /*  for(int i=2;i<N;++i)
-      std::cout<<"Z("<<i<<") = "<<Z(i)<<" fctrl = "<<factorial(i)<<std::endl;*/
-  std::cout<<"fctrl = "<<factorial(N)<<" Z(N) = "<<stupidZerosCount(factorial(N))<<std::endl;
+  //dev  for(int i=2;i<N;++i)
+  std::cout<<"Z("<<N<<") = "<<Z(N)<<std::endl;
+  // std::cout<<"fctrl = "<<factorial(N)<<" Z(N) = "<<stupidZerosCount(factorial(N))<<std::endl;
   //  std::cout<<"Z(60) = "<<Z(60)<<"; fctrl 60 = "<<factorial(60)<<std::endl;
   return 0;
 }
