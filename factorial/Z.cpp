@@ -38,7 +38,7 @@ unsigned long long factorial(unsigned long long N)
   unsigned long long acc=1;
   for(unsigned long long i=1;i<=N;++i)
     {
-      std::cout<<i<<" "<<acc<<std::endl;
+      //      std::cout<<i<<" "<<acc<<std::endl;
       acc*=i;
     }
 
