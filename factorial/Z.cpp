@@ -54,6 +54,6 @@ int main()
   std::cin>>N;
   for(int i=2;i<N;++i)
     std::cout<<"Z("<<i<<") = "<<Z(i)<<" fctrl = "<<factorial(i)<<std::endl;
-  //  std::cout<<"Z(60) = "<<Z(60)<<"; fctrl 60 = "<<factorial(60)<<std::endl;
+
   return 0;
 }
