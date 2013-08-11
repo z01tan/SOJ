@@ -1,20 +1,16 @@
 #include <stdio.h>
 
+
 int Z(int N)
 {
   int acc = 0;
-  int i;
-  for(i =0;i<=N;i+=5)
-    {
-      int local = i;
-      while((local%5)==0 && local!=0)
-	{
-	  ++acc;
-	  local/=5;
-	}
 
+  while(N>=5)
+    {
+      N/=5;
+      acc+=N;
     }
-  
+
   return acc;
 }
 
